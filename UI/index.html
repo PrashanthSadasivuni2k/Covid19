@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Covid19</title>
+
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<style>
+
+  </style>
+</head>
+<body>
+
+<!-- Top menu -->
+<div class="home">
+    <div class="container">
+        <div class="row">
+                <h1 class="covid"> <strong>Covid19 Symptoms chart</strong></h1>
+        </div>
+    </div>
+</div>
+
+<div class="header">
+  <h4> <strong> Drag the sliders to indicate the severity of each symptom</strong> </h4>
+</div>
+
+
+<div class="row" style="padding: 20px;">
+
+    <div class="column">
+        <div class="range">              
+          <div class="slidecontainer">
+              <h6>Dry-cough</h6>
+              <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+              <p>Value: <span id="demo"></span></p>
+          </div>
+
+
+          <div class="slidecontainer">
+               <h6>Fever</h6>
+                <input type="range" min="1" max="100" value="50" class="slider2" id="myRange2">
+                <p>Value: <span id="demo2"></span></p>
+          </div>
+
+          <div class="slidecontainer">
+              <h6>Pain</h6>
+              <input type="range" min="1" max="100" value="50" class="slider3" id="myRange3">
+              <p>Value: <span id="demo3"></span></p>
+          </div>
+        </div>
+
+    </div>
+
+
+    <div class="column" style="background-color:#bbb;">
+            <h2>Column 2</h2>
+            <p>Display Output here....</p>
+    </div>
+</div>
+
+
+
+<!----------Script-------------------->
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("demo2");
+output2.innerHTML = slider2.value;
+
+var slider3 = document.getElementById("myRange3");
+var output3 = document.getElementById("demo3");
+output3.innerHTML = slider3.value;
+
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+slider2.oninput = function() {
+  output2.innerHTML = this.value;
+}
+
+slider3.oninput = function() {
+  output3.innerHTML = this.value;
+}
+</script>
+
+</body>
+</html>
